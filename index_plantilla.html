@@ -1,0 +1,174 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Turnos médicos</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Mogglernet, turnos medicos, servicios">
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script type="application/x-javascript">
+      addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+      function hideURLbar(){ window.scrollTo(0,1); }
+    </script>
+    
+    <!-- Custom Theme files -->
+    <link href="css/wickedpicker.css" rel="stylesheet" type='text/css' media="all" />
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+    
+    <!-- Fonts --> 
+    <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+  </head>
+    
+  <body>
+    <h1>Formulario de turnos médicos</h1>
+    
+    <!-- Contenedor ppal -->
+    <div class="bg-agile">
+      <!-- Contenedor secundario -->
+      <div class="book-appointment">
+      
+        <h2>Solicitar turno</h2>
+        
+        <!-- Formulario -->
+        <form action="solicitud_turnos.php" method="post">
+          <div id="id"> <!-- TODO: Ojo con esto (Ini) -->
+            <!-- Consultorios y Profesionales - Left -->
+            <div class="left-agileits-w3layouts same">
+              <!-- Consultorios -->
+              <div class="gaps">
+                <p>Consultorio</p>	
+                <select class="form-control" name="consultorio">
+                  <option></option>
+                  <option>Aula 1</option>
+                  <option>Aula 2</option>
+                  <option>Aula 3</option>
+                  <option>Aula 4</option>
+                  <option>Aula 5</option>
+                  <option>Aula 6</option>
+                </select>
+              </div>
+              <!-- /Consultorios -->
+            
+              <!-- Profesionales -->
+              <div class="gaps">
+                <p>Profesional</p>	
+                <select class="form-control" name="profesional">
+                  <option></option>
+                  <option>Dr. Gomez</option>
+                  <option>Dr. Perez</option>
+                  <option>Dra. Badaloni</option>
+                  <option>Dr. Costa</option>
+                  <option>Dra. Wicky</option>
+                </select>
+              </div>
+              <!-- /Profesionales -->
+            </div>
+            <!-- /Consultorio y Profesional - Left -->
+            
+            <!-- Feacha y Hora - Rigth -->
+            <div class="right-agileinfo same">
+              <!-- /Feacha -->
+              <div class="gaps">
+                <p>Seleccionar fecha</p>		
+                <input  id="datepicker1" name="fecha" type="text" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'dd/mm/yyyy';}" required="">
+              </div>
+              <!-- /Feacha -->
+              
+              <!-- Hora -->
+              <div class="gaps">
+                <p>Hora</p>		
+                <input type="text" id="timepicker" name="hora" class="timepicker form-control" value="">	
+              </div>
+              <!-- /Hora -->
+            </div>
+            <!-- /Feacha y Hora - Rigth -->
+            
+            <div class="clear"></div>
+          
+            <!-- Nombre y telefono - Left -->
+            <div class="left-agileits-w3layouts same">
+              <!-- Nombre -->
+              <div class="gaps">
+                <p>Nombre del paciente</p>
+                <input type="text" name="nombre" placeholder="" required=""/>
+              </div>	
+              <!-- /Nombre -->
+              
+              <!-- Telefono -->
+              <div class="gaps">	
+                <p>Número de teléfono</p>
+                <input type="text" name="telefono" placeholder="" required=""/>
+              </div>
+              <!-- /Telefono -->
+            </div>
+            <!-- /Nombre y telefono - Left -->
+            
+            <!-- Email - Left -->
+            <div class="right-agileinfo same">
+              <!-- Email -->
+              <div class="gaps">
+                <p>Email</p>
+                <input type="email" name="email" placeholder="" required="" />
+              </div>
+              <!-- /Email -->
+            </div>
+            <!-- /Email - Left -->
+            
+            <div class="clear"></div>
+
+            <!-- Boton Enviar -->
+            <input type="submit" value="Enviar">
+            <script>
+              $( ".selector" ).dialog({ open: function( event, ui ) {} });
+            </script>
+            <!-- /Boton Enviar -->
+          </div> <!-- TODO: Ojo con esto (Fin) -->
+        </form>
+        <!-- /Formulario -->
+
+        <!-- Formulario/Boton Consulta -->
+        <form action="consulta_turnos.php" method="post">
+          <div id="idb">
+            <input type="submit" value="Consultar">
+          </div>
+        </form>
+        <!-- /Formulario/Boton Consulta -->
+
+      </div>
+      <!-- /Contenedor secundario -->
+    </div>
+    <!-- /Contenedor ppal -->
+    
+    <!-- Copyright -->
+    <div class="copy w3ls">
+      <p>&copy; 2017. Formulario de turnos médicos. Todos los derechos reservados  | Diseño por <a href="http://www.simbiosisweb.com/" target="_blank">Simbiosis</a> y <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+    </div>
+    <!-- Copyright -->
+        
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/wickedpicker.js"></script>
+    <script type="text/javascript">
+      $('.timepicker').wickedpicker({twentyFour: false});
+    </script>
+    
+    <!-- Calendario -->
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+    <script src="js/jquery-ui.js"></script>
+    <script>
+      $(function() {
+        $( "#datepicker1" ).datepicker();
+      });
+    </script>
+    <!-- /Calendario -->
+    
+  </body>
+</html>

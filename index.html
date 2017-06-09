@@ -1,0 +1,170 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Turnos médicos</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Mogglernet, turnos medicos, servicios">
+    
+    <link href="images/favicon.ico" rel="icon" type="image/x-icon">
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script type="application/x-javascript">
+      addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+      function hideURLbar(){ window.scrollTo(0,1); }
+    </script>
+    
+    <!-- Custom Theme files -->
+    <link href="css/wickedpicker.css" rel="stylesheet" type='text/css' media="all" />
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+    
+    <!-- Fonts --> 
+    <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+  </head>
+    
+  <body>
+    <h1>Formulario de turnos médicos</h1>
+    
+    <!-- Contenedor ppal -->
+    <div class="bg-agile">
+      <!-- Contenedor secundario -->
+      <div class="book-appointment">
+      
+        <h2>Solicitar turno</h2>
+        
+        <!-- Formulario -->
+        <form action="solicitud_turnos.php" method="post">
+          <!-- Consultorios y Profesionales - Left -->
+          <div class="left-agileits-w3layouts same">
+            <!-- Consultorios -->
+            <div class="gaps">
+              <p>Consultorio</p>	
+              <select class="form-control" name="on_centro">
+                <option></option>
+                <option>Aula 1</option>
+                <option>Aula 2</option>
+                <option>Aula 3</option>
+                <option>Aula 4</option>
+                <option>Aula 5</option>
+                <option>Aula 6</option>
+              </select>
+            </div>
+            <!-- /Consultorios -->
+          
+            <!-- Profesionales -->
+            <div class="gaps">
+              <p>Profesional</p>	
+              <select class="form-control" name="on_pro">
+                <option></option>
+                <option>Dr. Gomez</option>
+                <option>Dr. Perez</option>
+                <option>Dra. Badaloni</option>
+                <option>Dr. Costa</option>
+                <option>Dra. Wicky</option>
+              </select>
+            </div>
+            <!-- /Profesionales -->
+
+            <!-- Nombre -->
+            <div class="gaps">
+              <p>Nombre del paciente</p>
+              <input type="text" name="on_pac" placeholder="" required/>
+            </div>	
+            <!-- /Nombre -->
+
+            <!-- Dni -->
+            <div class="gaps">
+              <p>DNI</p>
+              <input type="text" name="on_dni" placeholder="" required/>
+            </div>	
+            <!-- /Dni -->
+          </div>
+          <!-- /Consultorio y Profesional - Left -->
+          
+          <!-- Fecha y Hora - Rigth -->
+          <div class="right-agileinfo same">
+            <!-- Fecha -->
+            <div class="gaps">
+              <p>Seleccionar fecha</p>		
+              <input id="datepicker1" name="on_fecha" type="text" value="" placeholder="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'dd/mm/yyyy';}" required/>
+            </div>
+            <!-- /Fecha -->
+            
+            <!-- Hora -->
+            <div class="gaps">
+              <p>Hora</p>		
+              <input type="text" id="timepicker" name="on_hora" placeholder="" class="timepicker form-control" value="" required/>	
+            </div>
+            <!-- /Hora -->
+
+            <!-- Obra Social -->
+            <div class="gaps">
+              <p>Obra Social</p>
+              <input type="text" name="on_obra" placeholder="" required/>
+            </div>	
+            <!-- /Obra Social -->
+
+            <!-- Telefono -->
+            <div class="gaps">	
+              <p>Número de teléfono</p>
+              <input type="text" name="on_tel" placeholder="" required/>
+            </div>
+            <!-- /Telefono -->
+          </div>
+          <!-- /Feacha y Hora - Rigth -->
+          
+          <div class="clear"></div>
+
+          <!-- Boton Enviar -->
+          <input class="boton_envio" type="submit" value="Enviar">
+          <!-- /Boton Enviar -->
+        </form>
+        <!-- /Formulario -->
+
+      </div>
+      <!-- /Contenedor secundario -->
+    </div>
+    <!-- /Contenedor ppal -->
+    
+    <!-- Copyright -->
+    <div class="copy w3ls">
+      <p>&copy; 2017. Formulario de turnos médicos. Todos los derechos reservados  | Diseño por <a href="http://www.simbiosisweb.com/" target="_blank">Simbiosis</a> y <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+    </div>
+    <!-- Copyright -->
+        
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/wickedpicker.js"></script>
+    <script type="text/javascript">
+      $('.timepicker').wickedpicker({twentyFour: true});
+    </script>
+    
+    <!-- Calendario -->
+    <!--link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" /-->
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+    <script src="js/jquery-ui.js"></script>
+    <script>
+      $(function() {
+        $( "#datepicker1" ).datepicker();
+      });
+    </script>
+    <!-- /Calendario -->
+
+    <!-- Pop-Up -->
+    <link href="css/popup.css" rel="stylesheet" type="text/css" />
+    <script src="js/funciones.js"></script>
+    
+    <div id="dialog-msj" title="Moggler - Turnos">
+      <p id="dialog-msj-text">Texto del pop-up de turnos</p>
+    </div>
+    <!-- /Pop-Up -->
+    
+  </body>
+</html>

@@ -1,0 +1,22 @@
+/* Estilo de los Pop-Up */
+.ui-widget {
+  font-family: 'Raleway', sans-serif;
+}
+.ui-widget-header {
+  border: 1px solid #dddddd;
+  background: #41a62a;
+  color: #ffffff;
+  font-weight: 550;
+  text-align: center;
+}
+.ui-widget.ui-widget-content {
+  border: 1px solid #41a62a;
+}  
+.ui-button {
+  border: 1px solid #672;
+}
+.ui-dialog .ui-dialog-content {
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #333;
+}
