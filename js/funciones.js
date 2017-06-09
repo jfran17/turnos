@@ -20,6 +20,7 @@ $(function() {
         on_dni   = $("[name=on_dni]").val();
         on_fecha = $("[name=on_fecha]").val();
         on_hora  = $("[name=on_hora]").val();
+        on_hora = on_hora.replace(/\s/g,'');
         on_obra  = $("[name=on_obra]").val();
         on_tel   = $("[name=on_tel]").val();
 

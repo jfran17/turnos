@@ -39,9 +39,11 @@
             <th>Fecha</th>
             <th>Hora</th>
             <th>Nombre</th>
+<!--
             <th>Telefono</th>
             <th>Dni</th>
             <th>Obra Social</th>
+-->
           </tr>
         </thead>
         <tbody>

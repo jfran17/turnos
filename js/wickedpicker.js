@@ -336,10 +336,10 @@
          */
         formatTime: function (hour, min, meridiem) {
             if (this.options.twentyFour) {
-                return hour + ':' + min;  // Si el espacio
+                return hour + ' : ' + min;  // Si el espacio
             }
             else {
-                return hour + ':' + min + ' ' + meridiem;
+                return hour + ' : ' + min + ' ' + meridiem;
             }
         },
 

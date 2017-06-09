@@ -13,7 +13,7 @@ if ($conn->connect_error) {
     die("Error al conectar: " . $conn->connect_error);
 } 
 
-$sql = "SELECT * FROM solicitudes";
+$sql = "SELECT * FROM solicitudes where on_rta like 'P'";
 $result = $conn->query($sql);
 
 $conn->close();
