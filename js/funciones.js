@@ -54,12 +54,12 @@ $(function() {
                 type: "POST",
                 url: "solicitud_turnos.php", /* archivo que procesa la solicitud en el servidor */
                 data: datos,
-                success: function() {
+                success: function(result) {
                     // Funcion a ejecutar en caso que el envío sea exitoso
                     $("#dialog-msj-text").text('Solicitud enviada!');
                     $("#dialog-msj").dialog("open");
                 },
-                error: function() {
+                error: function(result) {
                     // Funcion a ejecutar en caso que el envío falle
                     $("#dialog-msj-text").text('Error al enviar la solicitud! Intente nuevamente.');
                     $("#dialog-msj").dialog("open");

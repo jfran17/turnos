@@ -298,7 +298,7 @@
             if (targetClass.endsWith('hours')) {
                 this.setHours(eval(this.getHours() + operator + 1));
             } else if (targetClass.endsWith('minutes')) {
-                this.setMinutes(eval(this.getMinutes() + operator + 15));// Step
+                this.setMinutes(eval(this.getMinutes() + operator + 1));// Step
             } else {
                 this.setMeridiem();
             }
@@ -336,10 +336,10 @@
          */
         formatTime: function (hour, min, meridiem) {
             if (this.options.twentyFour) {
-                return hour + ' : ' + min;
+                return hour + ':' + min;  // Si el espacio
             }
             else {
-                return hour + ' : ' + min + ' ' + meridiem;
+                return hour + ':' + min + ' ' + meridiem;
             }
         },
 

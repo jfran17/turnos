@@ -40,7 +40,8 @@
             <th>Hora</th>
             <th>Nombre</th>
             <th>Telefono</th>
-            <th>Email</th>
+            <th>Dni</th>
+            <th>Obra Social</th>
           </tr>
         </thead>
         <tbody>
@@ -51,13 +52,14 @@
         // output data of each row
         while($row = $result->fetch_assoc()) {
           echo "<tr>";
-          echo "<td>".$row["consultorio"]."</td>";
-          echo "<td>".$row["profesional"]."</td>";
-          echo "<td>".$row["fecha"]."</td>";
-          echo "<td>".$row["hora"]."</td>";
-          echo "<td>".$row["nombre"]."</td>";
-          echo "<td>".$row["telefono"]."</td>";
-          echo "<td>".$row["email"]."</td>";
+          echo "<td>".$row["on_centro"]."</td>";
+          echo "<td>".$row["on_pro"]."</td>";
+          echo "<td>".$row["on_fecha"]."</td>";
+          echo "<td>".$row["on_hora"]."</td>";
+          echo "<td>".$row["on_pac"]."</td>";
+          echo "<td>".$row["on_tel"]."</td>";
+          echo "<td>".$row["on_dni"]."</td>";
+          echo "<td>".$row["on_obra"]."</td>";
           echo "</tr>";
         }
     }
