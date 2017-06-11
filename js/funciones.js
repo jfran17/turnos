@@ -1,4 +1,131 @@
+function listaCentros(result){
+    var html = "<option></option>";
+    var lista = result.split("|");
+
+    for(var i = 0; i < (lista.length - 1); i++) {
+        if((i % 2) == 0) {
+            html += "<option value=\"" + lista[i] + "\">";
+        }
+        else {
+            html += lista[i] + "</option>";
+        }
+    }
+
+    $("[name=on_centro]").html(html);
+}
+
+function listaEspecialidades(result){
+    var html = "<option></option>";
+    var lista = result.split("|");
+
+    for(var i = 0; i < (lista.length - 1); i++) {
+        if((i % 2) == 0) {
+            html += "<option value=\"" + lista[i] + "\">";
+        }
+        else {
+            html += lista[i] + "</option>";
+        }
+    }
+
+    $("[name=on_espe]").html(html);
+}
+
+function listaProfesionales(result){
+    var html = "<option></option>";
+    var lista = JSON.parse(result);
+    var idx;
+
+    for(idx in lista) {
+        html += "<option value=\"" + lista[idx]["id_med"] + "\">" + lista[idx]["med_desc"] + "</option>";
+    }
+
+    $("[name=on_pro]").html(html);
+}
+
+function listaObras(result){
+    var html = "<option></option>";
+    var lista = result.split("|");
+
+    for(var i = 0; i < (lista.length - 1); i++) {
+        if((i % 2) == 0) {
+            html += "<option value=\"" + lista[i] + "\">";
+        }
+        else {
+            html += lista[i] + "</option>";
+        }
+    }
+
+    $("[name=on_obra]").html(html);
+}
+
+function setFecha(result){}
+function setHora(result){}
+
+function consulta(id_consulta, data) {
+    var datos = '&id_consulta=' + id_consulta + '&data=' + data;
+    $.ajax({
+        type: "POST",
+        url: "solicitud_turnos.php", /* archivo que procesa la solicitud en el servidor */
+        data: datos,
+        success: function(result) {
+            switch(id_consulta) {
+                case 'on_centro':
+                    listaCentros(result);
+                    break;
+
+                case 'on_espe':
+                    listaEspecialidades(result);
+                    break;
+
+                case 'on_pro':
+                    listaProfesionales(result);
+                    break;
+
+                case 'on_obra':
+                    listaObras(result);
+                    break;
+
+                case 'on_fecha':
+                    setFecha(result);
+                    break;
+
+                case 'on_hora':
+                    setHora(result)
+                    break;
+
+                default: break;
+            }
+        },
+        error: function(result) {
+            // Funcion a ejecutar en caso que el envío falle
+            $("#dialog-msj-text").text('Ups, hubo un error! Intente mas tarde.');
+            $("#dialog-msj").dialog("open");
+        }
+    });
+}
+
 $(function() {
+    // Solicitar Centros
+    consulta("on_centro", "");
+
+    // Buscar especialidad
+    $("[name=on_centro]").change(function(){
+        var data = $("[name=on_centro]").val();
+
+        consulta("on_espe", data);
+        consulta("on_obra", data);
+    });
+
+    // Buscar especialidad
+    $("[name=on_espe]").change(function(){
+        var centro = $("[name=on_centro]").val();
+        var espe = $("[name=on_espe]").val();
+        var data = {on_centro: centro, on_espe: espe};
+
+        var data_to_send = JSON.stringify(data);
+        consulta("on_pro", data_to_send);
+    });
+
     // Pop-Up
     $("#dialog-msj").dialog({
         autoOpen: false,
@@ -50,7 +177,7 @@ $(function() {
             $("[name=on_tel]").focus();
             return false;
         } else {
-            var datos = '&on_centro=' + on_centro + '&on_pro=' + on_pro + '&on_pac=' + on_pac + '&on_dni=' + on_dni + '&on_fecha=' + on_fecha + '&on_hora=' + on_hora + '&on_obra=' + on_obra + '&on_tel=' + on_tel;
+            var datos = '&id_consulta=on_solicitud' + '&on_centro=' + on_centro + '&on_pro=' + on_pro + '&on_pac=' + on_pac + '&on_dni=' + on_dni + '&on_fecha=' + on_fecha + '&on_hora=' + on_hora + '&on_obra=' + on_obra + '&on_tel=' + on_tel;
             $.ajax({
                 type: "POST",
                 url: "solicitud_turnos.php", /* archivo que procesa la solicitud en el servidor */

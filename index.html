@@ -44,31 +44,27 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <form action="solicitud_turnos.php" method="post">
           <!-- Consultorios y Profesionales - Left -->
           <div class="left-agileits-w3layouts same">
+
             <!-- Consultorios -->
             <div class="gaps">
               <p>Consultorio</p>	
               <select class="form-control" name="on_centro">
-                <option></option>
-                <option>Aula 1</option>
-                <option>Aula 2</option>
-                <option>Aula 3</option>
-                <option>Aula 4</option>
-                <option>Aula 5</option>
-                <option>Aula 6</option>
               </select>
             </div>
             <!-- /Consultorios -->
           
+            <!-- Especialidades -->
+            <div class="gaps">
+              <p>Especialidad</p>  
+              <select class="form-control" name="on_espe">
+              </select>
+            </div>
+            <!-- /Especialidades -->
+
             <!-- Profesionales -->
             <div class="gaps">
               <p>Profesional</p>	
               <select class="form-control" name="on_pro">
-                <option></option>
-                <option>Dr. Gomez</option>
-                <option>Dr. Perez</option>
-                <option>Dra. Badaloni</option>
-                <option>Dr. Costa</option>
-                <option>Dra. Wicky</option>
               </select>
             </div>
             <!-- /Profesionales -->
@@ -108,7 +104,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <!-- Obra Social -->
             <div class="gaps">
               <p>Obra Social</p>
-              <input type="text" name="on_obra" placeholder="" required/>
+              <select class="form-control" name="on_obra">
+              </select>
             </div>	
             <!-- /Obra Social -->
 
