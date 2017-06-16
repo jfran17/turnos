@@ -32,8 +32,15 @@
 
     var pluginName = "wickedpicker",
         defaults = {
-            now: new Date(),
-            twentyFour: false
+            now         : new Date(),   /* Default time: Actual system hour */
+            stepH       : 1,            /* Hour Step: Minimun hour change */
+            stepM       : 1,            /* Minute Step: Minimun step change */
+            manual      : false,        /* Mode: In manual mode, de initial hour is set equal to de system hour, else use params */
+            hours       : 0,            /* Initial hour: In manual mode, initial hour */
+            minutes     : 0,            /* Initial minute: In manual mode, initial minutes */
+            seconds     : 0,            /* Initial seconds: In manual mode, initial seconds */
+            milliseconds: 0,            /* Initial milliseconds: In manual mode, initial milliseconds */
+            twentyFour  : false         /* Time style: AM/PM or 24 hs */
         };
 
     /*
@@ -54,6 +61,9 @@
         this.minutesElem = $('.wickedpicker__controls__control--minutes');
         this.meridiemElem = $('.wickedpicker__controls__control--meridiem');
         this.close = $('.wickedpicker__close');
+        if(this.options.manual == true) {
+            this.options.now = this.initTime();
+        }
         this.selectedHour = this.parseHours(this.options.now.getHours());
         this.selectedMin = this.parseMinutes(this.options.now.getMinutes());
         this.selectedMeridiem = this.parseMeridiem(this.options.now.getHours());
@@ -61,7 +71,38 @@
         this.attach(element);
     }
 
+    /*
+     * Sets the minut step
+     *
+     * @return none
+     */
+    function setStepM (stepM) {
+        if(stepM < 0)
+            stepM = 0;
+        
+        if(stepM > 59)
+            stepM = 59;
+
+        this.options.stepM = stepM;
+    }
+
     $.extend(Wickedpicker.prototype, {
+
+        /*
+         * Initialize to specific time
+         *
+         * @return {Object} Date
+         */
+        initTime: function () {
+            var now = new Date();
+
+            now.setHours(this.options.hours);
+            now.setMinutes(this.options.minutes);
+            now.setSeconds(this.options.seconds);
+            now.setMilliseconds(this.options.milliseconds);
+
+            return now;        
+        },
 
         /*
          * Show given input's timepicker
@@ -296,9 +337,9 @@
             var targetClass = $(target).attr('class');
 
             if (targetClass.endsWith('hours')) {
-                this.setHours(eval(this.getHours() + operator + 1));
+                this.setHours(eval(this.getHours() + operator + this.options.stepH));
             } else if (targetClass.endsWith('minutes')) {
-                this.setMinutes(eval(this.getMinutes() + operator + 1));// Step
+                this.setMinutes(eval(this.getMinutes() + operator + this.options.stepM));// Step
             } else {
                 this.setMeridiem();
             }

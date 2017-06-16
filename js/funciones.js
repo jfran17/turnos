@@ -141,14 +141,14 @@ $(function() {
 
     // Envío del mensaje
     $(".boton_envio").click(function() {
-        var on_centro = $("[name=on_centro]").val();
-        on_pro   = $("[name=on_pro]").val();
+        var on_centro = $("[name=on_centro] option:selected").text();
+        on_pro   = $("[name=on_pro] option:selected").text();
         on_pac   = $("[name=on_pac]").val();
         on_dni   = $("[name=on_dni]").val();
         on_fecha = $("[name=on_fecha]").val();
         on_hora  = $("[name=on_hora]").val();
         on_hora  = on_hora.replace(/\s/g,'');
-        on_obra  = $("[name=on_obra]").val();
+        on_obra  = $("[name=on_obra] option:selected").text();
         on_tel   = $("[name=on_tel]").val();
 
         // Validar datos

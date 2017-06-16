@@ -1,0 +1,57 @@
+/*--- Navbar (Ini) */
+.navbar {
+  margin-bottom: 0;
+  background-color: #41A62A;
+  z-index: 9999;
+  border: 0;
+  font-size: 12px !important;
+  line-height: 1.42857143 !important;
+  letter-spacing: 4px;
+  border-radius: 0;
+  font-family: Montserrat, sans-serif;
+}
+.navbar li a, .navbar .navbar-brand {
+  color: #fff !important;
+}
+.navbar-nav li a:hover, .navbar-nav li.active a {
+  color: #41A62A !important;
+  background-color: #fff !important;
+}
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+  color: #fff !important;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #132D0B;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  z-index: 1000;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  font-size: 14px;
+  text-align: left;
+  list-style: none;
+  background-color: #41A62A;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 4px;
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+.marca_estilo {
+  padding-top: 2px;
+  padding-right: 40px;
+  padding-left: 35px;
+  padding-bottom: 2px;
+}
+/* Navbar (Fin) */
+
+@media screen and (max-width: 768px) { /* 768 */
+  /* Navbar */
+  .nav_izq {
+    margin: 7.5px -15px 7.5px 0px;
+  }
+}
