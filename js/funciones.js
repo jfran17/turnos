@@ -58,6 +58,14 @@ function listaObras(result){
     $("[name=on_obra]").html(html);
 }
 
+function limpiarFormulario() {
+    // Limpiar el fromulario
+    $("#formTurnos")[0].reset();
+
+    // Solicitar Centros
+    consulta("on_centro", "");
+}
+
 function setFecha(result){}
 function setHora(result){}
 
@@ -186,11 +194,13 @@ $(function() {
                     // Funcion a ejecutar en caso que el envío sea exitoso
                     $("#dialog-msj-text").text('Solicitud enviada!');
                     $("#dialog-msj").dialog("open");
+                    limpiarFormulario();
                 },
                 error: function(result) {
                     // Funcion a ejecutar en caso que el envío falle
                     $("#dialog-msj-text").text('Error al enviar la solicitud! Intente nuevamente.');
                     $("#dialog-msj").dialog("open");
+                    limpiarFormulario();
                 }
             });
             return false;

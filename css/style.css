@@ -310,6 +310,26 @@ p.wickedpicker__title {
 }
 /*--//copyright--*/
 
+/*--Aviso--*/
+.aviso {
+    padding-left: 3.9%;/*32px;*/
+    padding-right: 2.9%;/*24px;*/
+    text-align: justify;
+}
+
+.aviso p {
+    color: #d6eefe;
+    font-size: 17px;
+    letter-spacing: .5px;
+    text-transform: none;
+}
+
+.aviso p.importante {
+    font-weight: 500;
+}
+
+/*--//Aviso--*/
+
 /*--responsive--*/
 @media(max-width: 1680px) {
 }

@@ -40,9 +40,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       <div class="book-appointment">
       
         <h2>Solicitar turno</h2>
-        
+
+        <div class="aviso">
+          <hr>
+          <p>Seleccione el centro médico al cual quiere solicitar el turno, la especialidad que involucra la atención y el médico de preferencia.</p>
+          <br>
+          <p>A continuacion complete el dato del paciente a ser atendido, número de documento, fecha y hora que solicita el turno, y si dispone o no (y cual) obra social.</p>
+          <br>
+          <p class="importante"><b>Por favor recuerde, que el numero de celular que ingrese, será al cual se le notificará si el turno queda aceptado o rechazado. Ingrese caracteristica y numero completo sin 0 y sin 15. Ejemplo, 3462123456 o 3519999999.</b></p>
+          <hr>
+          <br>
+        </div>
+
         <!-- Formulario -->
-        <form action="solicitud_turnos.php" method="post">
+        <form id="formTurnos" action="solicitud_turnos.php" method="post">
           <!-- Consultorios y Profesionales - Left -->
           <div class="left-agileits-w3layouts same">
 
