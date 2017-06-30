@@ -154,7 +154,7 @@ h1 {
     padding: 50px 30px;
 }
 
-.book-appointment input[type="text"], .book-appointment input[type="date"], .book-appointment input[type="time"], .book-appointment input[type="email"],textarea {
+.book-appointment input[type="text"], .book-appointment input[type="password"], .book-appointment input[type="date"], .book-appointment input[type="time"], .book-appointment input[type="email"],textarea {
     width: 85%;
     color: #fff;
     outline: none;
@@ -259,6 +259,11 @@ input[type=submit]:hover {
     float: left;
 }
 
+.center-agile {
+    width: 49%;
+    margin: 0 auto;
+}
+
 .book-appointment p {
     color: #d6eefe;
     font-size: 17px;
@@ -342,12 +347,12 @@ p.wickedpicker__title {
         padding-left: 2em;
     }
 
-    .book-appointment input[type="text"], .book-appointment input[type="date"], .book-appointment input[type="time"], .book-appointment input[type="email"], textarea {
+    .book-appointment input[type="text"], .book-appointment input[type="password"], .book-appointment input[type="date"], .book-appointment input[type="time"], .book-appointment input[type="email"], textarea {
         width: 90%;
     }
 
     .book-appointment select.form-control {
-        width: 95.5%;
+        width: 90%;/* TODO: 95.5 */
     }
 
     h1 {
@@ -409,7 +414,7 @@ p.wickedpicker__title {
         margin-bottom: 1.3em;
     }
 
-    .book-appointment input[type="text"], .book-appointment input[type="date"], .book-appointment input[type="time"], .book-appointment input[type="email"], textarea {
+    .book-appointment input[type="text"], .book-appointment input[type="password"], .book-appointment input[type="date"], .book-appointment input[type="time"], .book-appointment input[type="email"], textarea {
         margin: .3em 0em .7em;
     }
 
@@ -437,7 +442,7 @@ p.wickedpicker__title {
     }
 
     .book-appointment select.form-control {
-        width: 96.5%;
+        width: 90%;/* TODO: 96.5 */
     }
 }
 
@@ -447,7 +452,7 @@ p.wickedpicker__title {
         letter-spacing: 3px;
     }
 
-    .book-appointment input[type="text"], .book-appointment input[type="date"], .book-appointment input[type="time"], .book-appointment input[type="email"], textarea {
+    .book-appointment input[type="text"], .book-appointment input[type="password"], .book-appointment input[type="date"], .book-appointment input[type="time"], .book-appointment input[type="email"], textarea {
         line-height: 21px;
     }
 
@@ -534,7 +539,7 @@ p.wickedpicker__title {
 
 @media(max-width: 736px) {
     .book-appointment select.form-control {
-        width: 98%;
+        width: 90%;/* TODO: 98 */
     }
 }
 
@@ -547,7 +552,7 @@ p.wickedpicker__title {
         font-size: 13px;
     }
 
-    .book-appointment input[type="text"], .book-appointment input[type="date"], .book-appointment input[type="time"], .book-appointment input[type="email"], textarea {
+    .book-appointment input[type="text"], .book-appointment input[type="password"], .book-appointment input[type="date"], .book-appointment input[type="time"], .book-appointment input[type="email"], textarea {
         margin: .3em 0em .8em;
     }
 
@@ -603,7 +608,7 @@ p.wickedpicker__title {
     }
 
     .book-appointment select.form-control {
-        width: 99%;
+        width: 90%;/* TODO: 99% */
     }
 }
 
@@ -632,6 +637,10 @@ p.wickedpicker__title {
         float: none;
     }
 
+    .center-agile {
+        width: 100%;
+    }
+
     .gaps {
         padding-left: 0;
     }
@@ -640,7 +649,7 @@ p.wickedpicker__title {
         padding: 35px 40px;
     }
 
-    .book-appointment input[type="text"], .book-appointment input[type="date"], .book-appointment input[type="time"], .book-appointment input[type="email"], textarea {
+    .book-appointment input[type="text"], .book-appointment input[type="password"], .book-appointment input[type="date"], .book-appointment input[type="time"], .book-appointment input[type="email"], textarea {
         width: 93.5%;
     }
 
@@ -684,7 +693,7 @@ p.wickedpicker__title {
         letter-spacing: 2.5px;
     }
 
-    .book-appointment input[type="text"], .book-appointment input[type="date"], .book-appointment input[type="time"], .book-appointment input[type="email"], textarea {
+    .book-appointment input[type="text"], .book-appointment input[type="password"], .book-appointment input[type="date"], .book-appointment input[type="time"], .book-appointment input[type="email"], textarea {
         width: 91.5%;
     }
 }
@@ -702,7 +711,7 @@ p.wickedpicker__title {
     }
 
     .book-appointment select.form-control {
-        width: 100%;
+        width: 90%;/* TODO: 100% */
     }
 
     .wickedpicker {
@@ -723,9 +732,14 @@ p.wickedpicker__title {
         width: 86%;
     }
 
-    .book-appointment input[type="text"], .book-appointment input[type="date"], .book-appointment input[type="time"], .book-appointment input[type="email"], textarea {
+    .book-appointment input[type="text"], .book-appointment input[type="password"], .book-appointment input[type="date"], .book-appointment input[type="time"], .book-appointment input[type="email"], textarea {
         width: 91.8%;
     }
+
+    .book-appointment select.form-control {
+        width: 91.8%;/* TODO: none */
+    }
+
 }
 
 @media(max-width: 320px) {
@@ -748,8 +762,12 @@ p.wickedpicker__title {
         padding: 35px 25px;
     }
 
-    .book-appointment input[type="text"], .book-appointment input[type="date"], .book-appointment input[type="time"], .book-appointment input[type="email"], textarea {
+    .book-appointment input[type="text"], .book-appointment input[type="password"], .book-appointment input[type="date"], .book-appointment input[type="time"], .book-appointment input[type="email"], textarea {
         width: 91%;
+    }
+
+    .book-appointment select.form-control {
+        width: 91%;/* TODO: none */
     }
 
     body {

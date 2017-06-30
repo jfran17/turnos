@@ -1,0 +1,132 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Consulta Turnos</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Mogglernet, turnos medicos, servicios">
+    
+    <link href="images/favicon.ico" rel="icon" type="image/x-icon">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script type="application/x-javascript">
+      addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+      function hideURLbar(){ window.scrollTo(0,1); }
+    </script>
+    
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="css/navbar.css" rel='stylesheet' type='text/css' />
+
+    <!-- Custom Theme files -->
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+    
+    <!-- Fonts --> 
+    <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+  </head>
+    
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand marca_estilo" href="../index.html"> <img alt="Brand" src="./images/LogoMoggler.png" width="49" height="46"> </a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="../index.html">HOME</a></li>
+            <li><a href="index.html">SOLICITAR TURNO</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- /Navbar -->
+
+    <h1>Consulta de Turnos</h1>
+
+    <!-- Contenedor ppal -->
+    <div class="bg-agile">
+      <!-- Contenedor secundario -->
+      <div class="book-appointment">
+      
+        <h2>Consultar turnos</h2>
+
+        <!-- Formulario -->
+        <form id="formConsulta" action="consulta_turnos.php" method="post">
+          <!-- Consultorios, Uruario y Password - Left -->
+          <div class="center-agile same">
+
+            <!-- Consultorios -->
+            <div class="gaps">
+              <p>Consultorio</p>	
+              <select class="form-control" name="on_centro">
+              </select>
+            </div>
+            <!-- /Consultorios -->
+          
+            <!-- Usuario -->
+            <div class="gaps">
+              <p>Nombre de Usuario</p>
+              <input type="text" name="on_usr" placeholder="" required/>
+            </div>	
+            <!-- /Usuario -->
+
+            <!-- Password -->
+            <div class="gaps">
+              <p>Contraseña</p>
+              <input type="password" name="on_pass" placeholder="" required/>
+            </div>	
+            <!-- /Possword -->
+          </div>
+          <!-- /Consultorio, Uruario y Password - Left -->
+          
+          <div class="clear"></div>
+
+          <!-- Boton Consultar -->
+          <input class="boton_consulta" type="submit" value="Consultar">
+          <!-- /Boton Consultar -->
+        </form>
+        <!-- /Formulario -->
+
+      </div>
+      <!-- /Contenedor secundario -->
+    </div>
+    <!-- /Contenedor ppal -->
+    
+    <!-- Copyright -->
+    <div class="copy w3ls">
+      <p>&copy; 2017. Consulta de turnos médicos. Todos los derechos reservados  | Diseño por <a href="http://www.simbiosisweb.com/" target="_blank">Simbiosis</a> y <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+    </div>
+    <!-- Copyright -->
+        
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    
+    <!-- Calendario -->
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+    <script src="js/jquery-ui.js"></script>
+    <!-- /Calendario -->
+
+    <!-- Pop-Up -->
+    <link href="css/popup.css" rel="stylesheet" type="text/css" />
+    <script src="js/funciones_comunes.js"></script>
+    <script src="js/funciones_consultas.js"></script>
+    
+    <div id="dialog-msj" title="Moggler - Turnos">
+      <p id="dialog-msj-text">Texto del pop-up de turnos</p>
+    </div>
+    <!-- /Pop-Up -->
+    
+  </body>
+</html>

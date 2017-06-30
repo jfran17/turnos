@@ -21,6 +21,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       function hideURLbar(){ window.scrollTo(0,1); }
     </script>
     
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="css/navbar.css" rel='stylesheet' type='text/css' />
+
     <!-- Custom Theme files -->
     <link href="css/wickedpicker.css" rel="stylesheet" type='text/css' media="all" />
     <link href="css/style.css" rel='stylesheet' type='text/css' />
@@ -31,6 +34,26 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   </head>
     
   <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand marca_estilo" href="../index.html"> <img alt="Brand" src="./images/LogoMoggler.png" width="49" height="46"> </a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="../index.html">HOME</a></li>
+            <li><a href="centros.html">ACCESO CENTROS</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- /Navbar -->
 
     <h1>Formulario de turnos médicos</h1>
 
@@ -138,12 +161,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         </form>
         <!-- /Formulario -->
 
-        <!-- Formulario Consulta -->
-        <form action="consulta_turnos.php" method="post">
-          <input type="submit" value="Consultar">
-        </form>
-        <!-- /Formulario Consulta -->
-
       </div>
       <!-- /Contenedor secundario -->
     </div>
@@ -174,7 +191,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
     <!-- Pop-Up -->
     <link href="css/popup.css" rel="stylesheet" type="text/css" />
-    <script src="js/funciones.js"></script>
+    <script src="js/funciones_comunes.js"></script>
+    <script src="js/funciones_solicitudes.js"></script>
     
     <div id="dialog-msj" title="Moggler - Turnos">
       <p id="dialog-msj-text">Texto del pop-up de turnos</p>

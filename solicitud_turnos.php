@@ -63,7 +63,7 @@ switch($id_consulta) {
 			$aux = $result->fetch_all(MYSQLI_ASSOC);
 
 			// Parsear resultado
-			$resultados = json_encode($aux, JSON_FORCE_OBJECT);//json_encode($aux);
+			$resultados = json_encode($aux, JSON_FORCE_OBJECT);
 		}
 
 		break;
